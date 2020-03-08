@@ -1,0 +1,43 @@
+body,
+h1,
+p,
+button {
+  font-family: 'Open-sans', sans-serif;
+}
+button:focus {
+  border: 1px dashed;
+}
+
+.accordion__button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  outline: none;
+  cursor: pointer;
+  background: #fff;
+  text-align: left;
+  color: #A09161;
+  font-size: 21px;
+  transition: background 0.2s;
+}
+
+.accordion__button::before {
+  content: '\25be';
+  float: left;
+  padding-right: 15px;
+}
+
+.accordion__content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s;
+  padding: 0 15px;
+  font-family: 'Open-sans', sans-serif;
+  font-weight: 300;
+}
+
+.js-accordion__button--active::before {
+  content: '\25b4';
+}
