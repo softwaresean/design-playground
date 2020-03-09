@@ -9,7 +9,37 @@
 </head>
 <body>
   <h1>Accordion</h1>
-  <div class="accordion">
+  <div class="ds-accordion" role="tablist">
+    <div class="ds-pane" aria-expanded="true" role="tabepanel">
+      <button tabindex="0" role="tab">Panel 1</button>
+      <div class="content">
+        <p> 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="ds-accordion" role="tablist">
+    <div class="ds-pane" role="tabepanel">
+      <button tabindex="0" role="tab">Panel 2</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus expedita ea eveniet corrupti non nam voluptas exercitationem aut a dolorem, distinctio, reiciendis sapiente officia optio quidem? Nam maxime quam asperiores.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="ds-accordion" role="tablist">
+    <div class="ds-pane" role="tabepanel">
+      <button tabindex="0" role="tab">Panel 3</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus expedita ea eveniet corrupti non nam voluptas exercitationem aut a dolorem, distinctio, reiciendis sapiente officia optio quidem? Nam maxime quam asperiores.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="accordion">
     <button class="accordion__button" type="button">Expand Content</button>
     <div class="accordion__content">
       <p>
@@ -17,23 +47,26 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus expedita ea eveniet corrupti non nam voluptas exercitationem aut a dolorem, distinctio, reiciendis sapiente officia optio quidem? Nam maxime quam asperiores.
       </p>
     </div>
-  </div>
+  </div> -->
   <script>
-    const accordions = document.querySelectorAll('.accordion__button');
-    accordions.forEach( button => {
-      button.addEventListener('click', () => {
-        const accordionContent = button.nextElementSibling;
-        const buttonClass = button.classList;
-        const activeClass = 'js-accordion__button--active';
-        buttonClass.toggle(activeClass);
-        if (buttonClass.contains(activeClass)) {
-          accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`;
-        } else {
-          accordionContent.style.maxHeight = 0;
-        }
-      });
-    });
+    // const accordions = document.querySelectorAll('.accordion__button');
+    // accordions.forEach( button => {
+    //   button.addEventListener('click', () => {
+    //     const accordionContent = button.nextElementSibling;
+    //     const buttonClass = button.classList;
+    //     const activeClass = 'js-accordion__button--active';
+    //     buttonClass.toggle(activeClass);
+    //     if (buttonClass.contains(activeClass)) {
+    //       accordi4onContent.style.maxHeight = `${accordionContent.scrollHeight}px`;
+    //     } else {
+    //       accordionContent.style.maxHeight = 0;
+    //     }
+    //   });
+    // });
+
 
   </script>
+  <!-- <script src="./ds-panes.js"></script> -->
+  <script src="./accordion.js"></script>
 </body>
 </html>
