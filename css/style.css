@@ -23,7 +23,7 @@ p,
 button {
   font-family: 'Open-sans', sans-serif;
 }
-button:focus {
+.ds-pane button[role="tab"]:focus {
   border: 1px dashed;
 }
 
@@ -37,8 +37,6 @@ button:focus {
 }
 
 .ds-pane {
-  position: absolute;
-  top: 0;
   width: 100%;
   background: #fff;
 }
@@ -56,7 +54,14 @@ button:focus {
 }
 .ds-pane .content {
   overflow-y: scroll;
-  padding: 16px;
+  padding: 0px;
+  visibility: hidden;
+  height: 0;
+}
+.ds-pane[aria-expanded="true"] .content {
+  visibility: visible;
+  height: auto;
+  padding: 15px;
 }
 .accordion__button {
   display: block;
