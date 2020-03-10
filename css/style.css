@@ -27,6 +27,10 @@ button {
   border: 1px dashed;
 }
 
+p {
+  margin: 0 auto;
+}
+
 .ds-accordion {
   width: 100%;
   max-width: 500px;
@@ -49,11 +53,25 @@ button {
   text-align: left;
   color: #A09161;
   font-size: 21px;
-  height: 48px;
+  height: 100px;
   line-height: 48px;
+  font-weight: 300;
+}
+.ds-pane button[role="tab"]::before {
+  content: '';
+  border-style: solid;
+  border-width: .15em .15em 0 0;
+  height: .45em;
+  display: inline-block;
+  left: .15em;
+  top: -5px;
+  width: .45em;
+  transform: rotate(135deg);
+  position: relative;
+  margin-right: 20px;
+  transition: transform .25s ease-in-out;
 }
 .ds-pane .content {
-  overflow-y: scroll;
   padding: 0px;
   visibility: hidden;
   height: 0;
@@ -62,6 +80,10 @@ button {
   visibility: visible;
   height: auto;
   padding: 15px;
+}
+.ds-pane[aria-expanded="true"] button[role="tab"]::before {
+  transform: rotate(-45deg);
+  top: 0px;
 }
 .accordion__button {
   display: block;
