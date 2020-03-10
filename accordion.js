@@ -1,9 +1,8 @@
-let panes = null;
-panes = document.querySelectorAll('.ds-pane');
+const panes = document.querySelectorAll('.ds-pane');
 
 function calculateGeometries(panes) {
   if (panes.length === 0) return;
-  panes.forEach((pane, index) => {
+  panes.forEach(pane => {
     const panelBtn = pane.querySelector('button');
     panelBtn.addEventListener('click', () => {
       const dspane = panelBtn.parentElement;
@@ -13,4 +12,5 @@ function calculateGeometries(panes) {
     });
   });
 }
+
 calculateGeometries(panes);
