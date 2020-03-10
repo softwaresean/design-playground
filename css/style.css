@@ -75,6 +75,7 @@ p {
   padding: 0px;
   visibility: hidden;
   height: 0;
+  position: relative;
 }
 .ds-pane[aria-expanded="true"] .content {
   visibility: visible;
@@ -117,4 +118,58 @@ p {
 
 .js-accordion__button--active::before {
   content: '\25b4';
+}
+
+
+/* ********* */
+/* Checkbox */
+/* ******* */
+
+input[type="checkbox"] {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+input[type="checkbox"] + label {
+  position: relative;
+  color: #282828;
+  font-family: 'Open-sans', sans-serif;
+  font-size: 14px;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 250px;
+  padding: 8px 15px;
+  background-color: #F0F0F0;
+}
+input[type="checkbox"] + label::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background: white;
+  top: 0px;
+  border: 1px solid #B4B4B4;
+}
+input[type="checkbox"]:checked + label::before {
+}
+input[type="checkbox"]:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 21px;
+  border-left: 2px solid #505050;
+  border-bottom: 2px solid #505050;
+  height: 7px;
+  width: 14px;
+  transform: rotate(-45deg)
+}
+input[type="checkbox"]:focus + label::before {
+  outline: 1px dashed #000;
 }
