@@ -9,35 +9,62 @@
 </head>
 <body>
   <h1>Accordion</h1>
-  <div class="ds-accordion" role="tablist">
-    <div class="ds-pane" aria-expanded="true" role="tabpanel">
-      <button tabindex="0" role="tab">Corridor</button>
-      <div class="content">
-          <input type="checkbox" name="Wallbase" id="wallbase">
-          <label for="wallbase">Wall Base</label>
+  <div class="wrapper">
+    <div class="ds-accordion" role="tablist">
+      <div class="ds-pane" aria-expanded="true" role="tabpanel">
+        <button tabindex="0" role="tab">Corridor</button>
+        <div class="content">
+            <div class="input-sheet-grid">
+              <div class="input-sheet-grid__row input-sheet-grid__row--header">
+                <div class="cell--50 flex justify-content-fs">
+                  <p class="flex-1">Brand Optional Items</p>
+                  <p class="flex-1">Product Selection</p>
+                </div>
+                <div class="cell--50 flex">
+                  <p class="input-sheet-grid__25 cell--50">Remarks</p>
+                  <div class="flex text-align--right flex-1">
+                    <p class="input-sheet-grid__currency flex-1 cell--12">Price Per Unit</p>
+                    <p class="input-sheet-grid__currency flex-1 cell--12">Total Cost</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-sheet-grid__row">
+              <div class="cell--50 flex justify-content-fs">
+                <div class="flex-250 input-sheet-grid__cell">
+                  <input type="checkbox" name="Wallbase" id="wallbase">
+                  <label for="wallbase">Wall Base</label>
+                </div>
+                <div class="flex-1 input-sheet-grid__cell">
+                  <input type="text" name="" id="" placeholder="Wood Molding">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="ds-accordion" role="tablist">
+      <div class="ds-pane" role="tabpanel">
+        <button tabindex="0" role="tab">Entry/Foyer/Dressing/Closet Area</button>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus expedita ea eveniet corrupti non nam voluptas exercitationem aut a dolorem, distinctio, reiciendis sapiente officia optio quidem? Nam maxime quam asperiores.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="ds-accordion" role="tablist">
+      <div class="ds-pane" role="tabpanel">
+        <button tabindex="0" role="tab">Bathroom Area</button>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus expedita ea eveniet corrupti non nam voluptas exercitationem aut a dolorem, distinctio, reiciendis sapiente officia optio quidem? Nam maxime quam asperiores.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="ds-accordion" role="tablist">
-    <div class="ds-pane" role="tabpanel">
-      <button tabindex="0" role="tab">Entry/Foyer/Dressing/Closet Area</button>
-      <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus expedita ea eveniet corrupti non nam voluptas exercitationem aut a dolorem, distinctio, reiciendis sapiente officia optio quidem? Nam maxime quam asperiores.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="ds-accordion" role="tablist">
-    <div class="ds-pane" role="tabpanel">
-      <button tabindex="0" role="tab">Bathroom Area</button>
-      <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus expedita ea eveniet corrupti non nam voluptas exercitationem aut a dolorem, distinctio, reiciendis sapiente officia optio quidem? Nam maxime quam asperiores.
-        </p>
-      </div>
-    </div>
-  </div>
+
 
   <script src="./accordion.js"></script>
 </body>
