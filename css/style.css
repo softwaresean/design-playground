@@ -143,11 +143,12 @@ input[type="checkbox"] + label {
   color: #282828;
   font-family: 'Open-sans', sans-serif;
   font-size: 14px;
-  border: 1px solid #fff;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 8px 15px;
+  padding: 8px 0;
+  width: 100%;
+  margin: 0;
 }
 input[type="checkbox"] + label::before {
   content: '';
@@ -166,7 +167,7 @@ input[type="checkbox"]:checked + label::after {
   content: '';
   position: absolute;
   top: 14px;
-  left: 21px;
+  left: 6px;
   border-left: 2px solid #505050;
   border-bottom: 2px solid #505050;
   height: 7px;
@@ -192,6 +193,12 @@ input[type="checkbox"]:focus + label::before {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border: 1px solid #fff;
+  padding: 0 15px;
+}
+.input-sheet-grid__row p {
+  font-size: 13px;
+  color: #282828;
 }
 .input-sheet-grid__row--header p {
   font-weight: bold;
@@ -207,10 +214,12 @@ input[type="checkbox"]:focus + label::before {
 }
 .flex-1 {
   flex: 1;
+  flex-basis: 50%;
 }
 .flex-250 {
   flex-basis: 250px;
   flex-grow: 1;
+  max-width: 250px;
 }
 .justify-content-sb {
   justify-content: space-between;
