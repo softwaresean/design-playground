@@ -16,6 +16,12 @@ body {
   background: #eee;
 }
 
+.wrapper {
+  padding: 20px;
+  max-width: 1186px;
+  background-color: #fff;
+}
+
 
 body,
 h1,
@@ -27,13 +33,10 @@ button {
   border: 1px dashed;
 }
 
-p {
-  margin: 0 auto;
-}
+
 
 .ds-accordion {
   width: 100%;
-  max-width: 500px;
   box-shadow: 0 3px 4px rgba(0,0,0,0.4);
   background: #fff;
   border-radius: 3px;
@@ -56,6 +59,7 @@ p {
   height: 100px;
   line-height: 48px;
   font-weight: 300;
+  background-color: #fff;
 }
 .ds-pane button[role="tab"]::before {
   content: '';
@@ -77,6 +81,7 @@ p {
   height: 0;
   position: relative;
 }
+
 .ds-pane[aria-expanded="true"] .content {
   visibility: visible;
   height: auto;
@@ -142,9 +147,7 @@ input[type="checkbox"] + label {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  max-width: 250px;
   padding: 8px 15px;
-  background-color: #F0F0F0;
 }
 input[type="checkbox"] + label::before {
   content: '';
@@ -172,4 +175,59 @@ input[type="checkbox"]:checked + label::after {
 }
 input[type="checkbox"]:focus + label::before {
   outline: 1px dashed #000;
+}
+
+
+/* ********* */
+/* Input Sheet Grid */
+/* ******* */
+
+.input-sheet-grid__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.input-sheet-grid__cell {
+  background-color: #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.input-sheet-grid__row--header p {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+.input-sheet-grid__row--header p:not(:first-child) {
+  margin: 0 0 15px 15px;
+}
+
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-250 {
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+.justify-content-sb {
+  justify-content: space-between;
+}
+.justify-content-fs {
+  justify-content: flex-start;
+}
+.cell--25 {
+  flex-basis: 25%;
+}
+.cell--50 {
+  flex-basis: 50%;
+}
+.cell--12 {
+  flex-basis: 12.5%;
+}
+
+.text-align--right {
+  text-align: right;
 }
