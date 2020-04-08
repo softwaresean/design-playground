@@ -15,3 +15,4 @@ function setPanelAttr() {
 }
 
 panelEventHandler(panes);
+
